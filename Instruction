@@ -1,0 +1,31 @@
+Compile:
+javac AffineCipher.java
+Command Syntax:
+java AffineCipher [KeyA] [KeyB] [-e/-d] [filename1] [filename2]
+
+C:\Users\ngzhe\IdeaProjects\AffineCipher\src>java AffineCipher 3 8 -e input.txt output.txt
+PlainText: AFFINE CIPHER
+Encrypted Msg: IXXGVU OGBDUH
+Output'd Encrypted Msg to: output.txt
+
+C:\Users\ngzhe\IdeaProjects\AffineCipher\src>java AffineCipher 3 8 -d output.txt input.txt
+Cipher: IXXGVU OGBDUH
+Decrypted Msg: AFFINE CIPHER
+Output'd Decrypted Msg to: input.txt
+
+C:\Users\ngzhe\IdeaProjects\AffineCipher\src>java AffineCipher 8 3 -d output.txt input.txt
+Exception in thread "main" java.lang.ArithmeticException: Key A is invalid
+        at AffineCipher.main(AffineCipher.java:80)
+
+C:\Users\ngzhe\IdeaProjects\AffineCipher\src>java AffineCipher 5 0 -d output.txt input.txt
+Cipher: IXXGVU OGBDUH
+Decrypted Msg: MPPWZE IWVLER
+Output'd Decrypted Msg to: input.txt
+
+C:\Users\ngzhe\IdeaProjects\AffineCipher\src>java AffineCipher 0 5 -e output.txt input.txt
+Exception in thread "main" java.lang.ArithmeticException: Key A is invalid
+        at AffineCipher.main(AffineCipher.java:80)
+
+C:\Users\ngzhe\IdeaProjects\AffineCipher\src>java AffineCipher 13 1 -e output.txt input.txt
+Exception in thread "main" java.lang.ArithmeticException: Key A is invalid
+        at AffineCipher.main(AffineCipher.java:80)
